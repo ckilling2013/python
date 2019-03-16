@@ -13,6 +13,8 @@ class Email:
         self.frm = args.frm
         self.subject = None
         self.text = None
+        self.api_key = args.api_key
+        self.api_secret = args.api_secret
 
     def mail_jet_send(self):
         """ Construct Email and send """
@@ -75,6 +77,17 @@ def main():
                         type=str,
                         help='To',
                         default='4083156891@tmomail.net')
+
+    parser.add_argument("--api_key"
+                        type=str,
+                        required=True,
+                        help="MailJet API Key")
+
+    parser.add_argument("--api_secret"
+                        type=str,
+                        required=True,
+                        help="MailJet secret Key")
+                        
 
     args = parser.parse_args()
 
