@@ -78,12 +78,12 @@ def main():
                         help='To',
                         default='4083156891@tmomail.net')
 
-    parser.add_argument("--api_key"
+    parser.add_argument("--api_key",
                         type=str,
                         required=True,
                         help="MailJet API Key")
 
-    parser.add_argument("--api_secret"
+    parser.add_argument("--api_secret",
                         type=str,
                         required=True,
                         help="MailJet secret Key")
